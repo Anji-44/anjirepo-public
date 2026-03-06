@@ -1,0 +1,202 @@
+open gitbash
+
+git --version      --> to check the version
+
+cd ~/Desktop       --> change to desktop
+
+mkdir <filename>   --> create file name ( mkdir facebook)
+
+cd filename        -->change to facebook (cd facebook)
+
+git init           --> it will create local empty repository
+
+git status         --> here are 3 logical areas has created
+                        1) working area
+                        2) staging area
+                        3) local repo
+
+
+vi filename        --> to create a file (file name anji.java)
+
+git add filename   --> it will take the file from working area to staging
+                       1. ( git add .) move all files in current directory
+                       2. ( git add * ) move all files in any directory
+                       3. ( git add *.java) only move java files
+
+git status          --> check the status
+
+git commit -m "first commit" --> to move local repo
+
+git config --global user.name "Anji-44" --> add username
+git config --global user.email "email"  --> add email
+git config --global --list              --> to check our username and email
+
+git status
+
+git remote add fb (url)  --> add repository url
+
+git remote -v            --> it will show fetch and push details
+
+git push fb master   --> to push local  to remote repo { fb means alias name} master means branch name}
+
+      if ask the username and passwords --> username anji-44 and pasword we should give token from github
+
+git log --> this command use for how many times we have commit and how many files
+
+git log filename --> to show about specific file
+
+//how to remove (delete)repository?
+----------------------------------
+go to facebook-->ls-->git remote -v --> {there u you will see fetch and push url`s }
+
+how to remove?
+--------------
+git remote remove fb ---> (fb means alias name)
+
+how to add?
+----------
+git remote add fb url
+
+how to see last 2 commits?
+--------------------------
+git log -2
+
+how to see adding extra content in files?
+-----------------------------------------
+git show id (commit id)
+
+get back to the files staging area to working area?
+--------------------------------------------------
+git reset
+
+get back only one file?
+-----------------------
+git reset filename
+
+                                     	BRANCH
+					-------
+
+how to see branches?
+-------------------
+git branch
+
+create a branch name as development
+-----------------------------------
+git branch development
+
+switch one branch to another branch
+-----------------------------------
+git checkout branchname
+
+to display updated content
+----------------------------
+git commit -a -m "updated"
+
+to display all content in one branch
+------------------------------------
+git diff branchname
+
+create a branch and switch directly to the newly created branch with one single command
+---------------------------------------------------------------------------------------
+git checkout -b newbranchname    ---> -b will create a branch and switch automaticallyy
+
+how to push 2 branches to remote repository
+---------------------------------------------
+git push fb branch1 branch2
+
+push all branches to remote repository
+--------------------------------------
+git push fb --all
+
+how to delete branch
+---------------------
+git branch -d branchname    {we cant delete active branch (present branch)}
+
+how to remove active branch (rename) 
+---------------------------------------
+git branch -m newbranchname    --> ex: (git branch -m staging) stage is the old branch and staging is the new branch name
+
+how to rename any branch?
+------------------------
+git branch -m oldname newname
+
+how to display remote repository branches?
+-------------------------------------------
+git branch -r
+
+to display all branches
+-----------------------
+git branch -a
+
+to delete remote repository branches
+------------------------------------
+git push fb :branchname
+
+                                                                          TAG
+									  ----
+
+how to create tag?
+-----------------
+git tag tagname
+ex:
+    git tag facebookv1.0.0
+ (facebook is project name--> v1.0.0 is the version--> v1 is major version and 0 is the minor version 0 is the patch)
+
+how to see tag
+--------------
+git tag
+    (facebookv1.0.0)
+
+how to delete tags?
+-------------------
+git tag -d tagname
+
+how to push tag?
+-----------------
+git push fb tag tagname
+ex:
+   git push fb tag facebookv1.0.0
+
+how to push all tags?
+---------------------
+git push fb --tags
+
+                                                                             GIT STASH
+									     ----------
+
+{ git stash command is temporery storage for current working branch}
+
+we want to change current stage to temporery stage
+---------------------------------------------------
+git stash
+
+to display how many we have moved in temporery stage
+-----------------------------------------------------
+git stash list
+
+      it display like:
+       stash@{0}
+       stash@{1}
+       stash@{2}
+
+we want change only specify one
+------------------------------
+git stash apply stash@{1}
+
+how to delete backup stage?
+---------------------------
+git stash drop   --> (the recent one is going to delete)
+
+how to delete specific one?
+--------------------------
+git stash drop stash@{1}
+
+for applying and deleting in one command
+----------------------------------------
+git stash pop  ---> recent one
+git stash pop stash@{1} ---> specific one
+
+
+
+
+   

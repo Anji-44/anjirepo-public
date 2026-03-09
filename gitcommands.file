@@ -196,7 +196,7 @@ for applying and deleting in one command
 git stash pop  ---> recent one
 git stash pop stash@{1} ---> specific one
 
-
+<------------>
 
 
    

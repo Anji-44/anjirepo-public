@@ -73,6 +73,21 @@ get back only one file?
 -----------------------
 git reset filename
 
+                                         git fetch & pull
+					 -----------------
+
+(we have content in one file, and we have to move content to another file)
+
+git fetch ab master
+cat filename
+git merge fb branchname
+
+git pull
+---------
+git pull fb branchname
+
+
+
                                      	BRANCH
 					-------
 
@@ -196,7 +211,50 @@ for applying and deleting in one command
 git stash pop  ---> recent one
 git stash pop stash@{1} ---> specific one
 
-<------------>
+                                                                              
+                                                                              SSH
+									     -----
 
+how to generate ssh key
+-----------------------
+ssh-keygen
+( ssh-keygen --> enter button --> (passphrass) dont give anything just enter button --> again enter button --> here keygen generated)
 
-   
+how to desplay how many keys generated?
+----------------------------------------
+ls -la ~/.ssh/
+   ( it will create like this (id_rsa &  id_rsa.pub) two types)
+
+copy content (code) in id_rsa.pub
+-----------------------------------
+(~/.ssh/)-----> this is the default path
+
+cat ~/.ssh/id_rsa.pub
+(here will see some message typed content, copy properly all)
+
+then
+----
+      go to github server--> go to profile--> settings-->
+      scroll down--> left side ssh and gpg keys click on that-->
+      ssh keys new shh key click on that--> TITLE (give any name)-->
+      key, here we will past--> add ssh key--> confirm password
+
+how to configur?
+----------------
+ssh -T git@github.com ---> practice time
+https://mss.ghe.com   ---> real time
+ssh -T git@mss.ghe.com ---> we need to do like this in real time
+
+to map the ssh url
+---------------------
+git remote -v
+git remote add sshurl  --->(go to repository--> go to code--> you can find the ssh url)
+git remote -v  --> to check
+
+                                                                          PAT ( personal access token)
+									  -----------------------------
+
+go to the github server-->
+go to personal settings--> developer settings-->personal access token-->
+generate new token-->provide some info about token in token description input box-->
+select the appropreate the scopes and and click on generate token button.....

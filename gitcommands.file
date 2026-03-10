@@ -74,7 +74,7 @@ get back only one file?
 git reset filename
 
                                          git fetch & pull
-					 -----------------
+					                     -----------------
 
 (we have content in one file, and we have to move content to another file)
 
@@ -89,7 +89,7 @@ git pull fb branchname
 
 
                                      	BRANCH
-					-------
+				                        -------
 
 how to see branches?
 -------------------
@@ -147,8 +147,8 @@ to delete remote repository branches
 ------------------------------------
 git push fb :branchname
 
-                                                                          TAG
-									  ----
+                                                               TAG
+								                            --------
 
 how to create tag?
 -----------------
@@ -176,8 +176,8 @@ how to push all tags?
 ---------------------
 git push fb --tags
 
-                                                                             GIT STASH
-									     ----------
+                                                        GIT STASH
+									                    ----------
 
 { git stash command is temporery storage for current working branch}
 
@@ -212,8 +212,8 @@ git stash pop  ---> recent one
 git stash pop stash@{1} ---> specific one
 
                                                                               
-                                                                              SSH
-									     -----
+                                                            SSH
+									                       -----
 
 how to generate ssh key
 -----------------------
@@ -251,8 +251,8 @@ git remote -v
 git remote add sshurl  --->(go to repository--> go to code--> you can find the ssh url)
 git remote -v  --> to check
 
-                                                                          PAT ( personal access token)
-									  -----------------------------
+                                                PAT ( personal access token)
+									            -----------------------------
 
 go to the github server-->
 go to personal settings--> developer settings-->personal access token-->
